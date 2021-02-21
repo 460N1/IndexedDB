@@ -3,6 +3,10 @@ Enhancing browsing experience by making use of IndexedDB.
 
 By making use of client side IndexedDB, a lot of page content can be cached. IndexedDB is especially useful for this as it does not have a certain size limit set, unlike localStorage, sessionStorage and cookies. The storage limit depends on the user's disk space, and is usually in the GBs. And despite that, it's still a rather untapped offloading location.
 
+This script itself does not require any other script, i.e. it does not depend on anything like jQuery as it's pure Javascript implementation.
+
+It's also mobile- and browser-friendly - it works for all modern browsers, on desktop and mobile.
+
 What can be cached using this script?
 - Images
 - Stylesheets
@@ -55,5 +59,7 @@ On my end, testing locally, with content on the site upwards of 20MB:
 - Finish: 279 ms
 
 3rd run and all consecutive runs are pretty much identical to the 2nd, so they will be omitted for brevity.
+
+It is also fully mobile browser friendly.
 
 I intend to continue this, especially regarding enhancments on performance and possibly adding compression.
