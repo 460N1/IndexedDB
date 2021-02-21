@@ -1,11 +1,9 @@
-# IndexedDB
+# IndexedDB Caching
 Enhancing browsing experience by making use of IndexedDB. First of, it's by caching. More to add later.
-
-# Caching
 By making use of client side IndexedDB, a lot of page content can be cached.
-IndexedDB does not have a certain size limit set, unlike localStorage, sessionStorage and cookies.
+IndexedDB is especially useful for this as it does not have a certain size limit set, unlike localStorage, sessionStorage and cookies.
 The storage limit depends on the user's disk space, and is usually in the GBs.
-It's still a rather untapped offloading location.
+And despite that, it's still a rather untapped offloading location.
 
 Using IndexedDB, in combination with Base64, the script named '460n1.caching.js', enables you to permanently cache site content on user's devices.
 
