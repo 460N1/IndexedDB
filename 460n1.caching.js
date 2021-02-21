@@ -97,5 +97,6 @@ selfDestruct = (id) => document.getElementById(id).parentNode.removeChild(docume
 	let dataSrc = document.querySelectorAll("[data-src]");
 	for (let i = 0; i < dataSrc.length; i++)
 		readSource(dataSrc[i].getAttribute("data-src"));
-	selfDestruct("460N1");
+	var thisScript = document.querySelectorAll("[src*='460n1.caching']")[0];
+	thisScript.parentNode.removeChild(thisScript)
 })();
