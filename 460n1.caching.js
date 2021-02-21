@@ -15,9 +15,6 @@ function DB(name) {
 		openReq.onsuccess = (e) => {
 			let db = e.target.result;
 			let tx = db.transaction(stores, mode);
-			tx.oncomplete = (e) => {
-				return;
-			};
 			fn(tx);
 		};
 	};
@@ -83,6 +80,7 @@ dataType = (src) => {
 	let dataSrc = document.querySelectorAll("[data-src]");
 	for (let i = 0; i < dataSrc.length; i++)
 		readSource(dataSrc[i].getAttribute("data-src"));
-	var thisScript = document.querySelectorAll("[src*='460n1.caching']")[0];
+	selfDestruct();
+	let thisScript = document.querySelectorAll("[src*='460n1.caching']")[0];
 	thisScript.parentNode.removeChild(thisScript);
 })();
