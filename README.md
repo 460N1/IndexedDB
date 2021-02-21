@@ -40,7 +40,7 @@ As for the content you wish to cache, all you have to do is replace the src attr
 
 ## Issues
 - No support yet for seperate source tags inside video tag. I'll figure it out eventually.
-- * Not exactly an issue, but might be perceived as one. There's no check for updates, meaning... if you're using a stylesheet or javascript file and you change it on the server end, it will not change on the client side unless you change its name. This is because this is intended to be used as a permanent cache. The whole point of this is to not need to get the data again from anywhere, for any reason.
+- This one is not exactly an issue, but might be perceived as one. There's no check for updates, meaning... if you're using a stylesheet or javascript file and you change it on the server end, it will not change on the client side unless you change its name. This is because this is intended to be used as a permanent cache. The whole point of this is to not need to get the data again from anywhere, for any reason.
 
 ## Tests
 On the first time your clients open the site, the speed of the site will obviously depend on the client's hardware specs as well as their internet speed. On any consecutive run, however, the site will load as fast as their browser can handle the data.
