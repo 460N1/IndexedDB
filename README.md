@@ -35,8 +35,9 @@ From your side, all you have to do is replace the src attribute with data-src, a
 
   
 Script must be placed at the bottom of the page, else it might miss scripts or content.
+
 ```<script src="460n1.caching.js"></script>```
-Just a heads up - the script removes itself at the end of execution.
+
 
 Issues
 - No support yet for seperate source tags inside video tag. I'll figure it out eventually.
