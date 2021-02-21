@@ -18,7 +18,7 @@ What can be cached?
 
 How to use the script?
 From your side, all you have to do is replace the src attribute with data-src, as in:
-<img data-src="image-01-01-01.png"/> OR <img data-src="https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg"/>
+```<img data-src="image-01-01-01.png"/> OR <img data-src="https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg"/>```
 <video data-src="intro.mp4" controls autoplay muted></video>
 <script data-src="bootstrap.min.js"></script>
 <script data-src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
