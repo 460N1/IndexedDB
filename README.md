@@ -17,7 +17,13 @@ What can be cached?
 - (possibly more to come, but what else is realistically left that could/should be cached?)
 
 How to use the script?
-From your side, all you have to do is replace the src attribute with data-src, as in:
+  
+Script must be placed at the bottom of the page, else it might miss scripts or content:
+
+```<script src="460n1.caching.js"></script>```
+
+
+As for the content you wish to cache, all you have to do is replace the src attribute with data-src, as in:
 
 ```<img data-src="image-01-01-01.png"/>```
 
@@ -32,11 +38,6 @@ From your side, all you have to do is replace the src attribute with data-src, a
 ```<link rel="stylesheet" type="text/css" data-src="bootstrap.min.css"/>```
 
 ```<link rel="stylesheet" type="text/css" data-src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css"/>```
-
-  
-Script must be placed at the bottom of the page, else it might miss scripts or content.
-
-```<script src="460n1.caching.js"></script>```
 
 
 Issues
