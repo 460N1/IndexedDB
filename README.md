@@ -3,18 +3,18 @@ Enhancing browsing experience by making use of IndexedDB.
 
 By making use of client side IndexedDB, a lot of page content can be cached. IndexedDB is especially useful for this as it does not have a certain size limit set, unlike localStorage, sessionStorage and cookies. The storage limit depends on the user's disk space, and is usually in the GBs. And despite that, it's still a rather untapped offloading location.
 
-This script itself does not require any other script, i.e. it does not depend on anything like jQuery as it's pure Javascript implementation.
+This script itself does not require any other script, i.e. it does not depend on anything like jQuery as it's a pure Javascript implementation.
 
-It's also mobile- and browser-friendly - it works for all modern browsers, on desktop and mobile.
+It's also mobile- and browser-friendly meaning it works for all modern browsers, on desktop AND mobile.
 
-What can be cached using this script?
+## What can be cached using this script?
 - Images
 - Stylesheets
 - Scripts
 - Videos
 - (possibly more to come, but what else is realistically left that could/should be cached?)
 
-How to use it?
+## How to use it?
   
 Script must be placed at the bottom of the page, else it might miss scripts or content:
 
@@ -38,12 +38,12 @@ As for the content you wish to cache, all you have to do is replace the src attr
 - ```<link rel="stylesheet" type="text/css" data-src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css"/>```
 
 
-Issues
+## Issues
 - No support yet for seperate source tags inside video tag. I'll figure it out eventually.
 - No checking if the scripts have been updated. Say you're using a style.css or site.js and you change it, it won't change on the client side as this is meant to be a permanent cache. Considering whether I should even add a check for that. The whole point of this is to not need to get the data again from anywhere, for any reason.
 - You tell me if you find anything...
 
-Tests
+## Tests
 On the first time your clients open the site, the speed of the site will obviously depend on the client's hardware specs as well as their internet speed. On any consecutive run, however, the site will load as fast as their browser can handle the data.
 
 On my end, testing locally, with content on the site upwards of 20MB:
@@ -60,6 +60,6 @@ On my end, testing locally, with content on the site upwards of 20MB:
 
 3rd run and all consecutive runs are pretty much identical to the 2nd, so they will be omitted for brevity.
 
-It is also fully mobile browser friendly.
+## Parting words
 
-I intend to continue this, especially regarding enhancments on performance and possibly adding compression.
+I intend to continue this, especially regarding enhancments on performance and possibly adding compression. If you have any ideas regarding those, I'd love to hear them.
