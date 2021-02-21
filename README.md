@@ -29,22 +29,21 @@ Script must be placed at the bottom of the page, else it might miss scripts or c
 Just a heads up - the script removes itself at the end of execution.
 
 Issues
-  - No support yet for seperate source tags inside video tag. I'll figure it out eventually.
-  - No checking if the scripts have been updated. Say you're using a style.css or site.js and you change it, it won't change on the client side as this is meant to be a permanent cache. Considering whether I should even add a check for that. The whole point of this is to not need to get the data again from anywhere, for any reason.
-  - You tell me if you find anything...
+- No support yet for seperate source tags inside video tag. I'll figure it out eventually.
+- No checking if the scripts have been updated. Say you're using a style.css or site.js and you change it, it won't change on the client side as this is meant to be a permanent cache. Considering whether I should even add a check for that. The whole point of this is to not need to get the data again from anywhere, for any reason.
+- You tell me if you find anything...
 
 Tests
-  On the first time your clients open the site, the speed of the site will obviously depend on the client's hardware specs as well as their internet speed. On any consecutive run, however, the site will load as fast as their browser can handle the data.
-  On my end, testing locally, with content on the site amounting to 20.2MB:
-    1st run: 
-      - 4.2 kB transferred
-      - 22.3 MB resources
-      - Finish: 623 ms
-    2nd run:
-      - 731 B transferred
-      - 1.1 MB resources
-      - Finish: 279 ms
-    3rd run and all consecutive runs are pretty much identical to the 2nd, so they will be omitted.
+On the first time your clients open the site, the speed of the site will obviously depend on the client's hardware specs as well as their internet speed. On any consecutive run, however, the site will load as fast as their browser can handle the data.
+On my end, testing locally, with content on the site amounting to 20.2MB:
+1st run: 
+- 4.2 kB transferred
+- 22.3 MB resources
+- Finish: 623 ms
+2nd run:
+- 731 B transferred
+- 1.1 MB resources
+- Finish: 279 ms
+3rd run and all consecutive runs are pretty much identical to the 2nd, so they will be omitted.
     
-Further development
-  I intend to continue this, possibly adding compression down the road, and enhancing performance.
+I intend to continue this, possibly adding compression down the road, and enhancing performance.
