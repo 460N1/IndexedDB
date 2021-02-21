@@ -19,12 +19,20 @@ What can be cached?
 How to use the script?
 From your side, all you have to do is replace the src attribute with data-src, as in:
 
-```<img data-src="image-01-01-01.png"/>``` OR ```<img data-src="https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg"/>```
+```<img data-src="image-01-01-01.png"/>```
+
+```<img data-src="https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg"/>```
+
 ```<video data-src="intro.mp4" controls autoplay muted></video>```
+
 ```<script data-src="bootstrap.min.js"></script>```
+
 ```<script data-src="https://code.jquery.com/jquery-3.5.1.min.js"></script>```
+
 ```<link rel="stylesheet" type="text/css" data-src="bootstrap.min.css"/>```
+
 ```<link rel="stylesheet" type="text/css" data-src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css"/>```
+
   
 Script must be placed at the bottom of the page, else it might miss scripts or content.
 ```<script src="460n1.caching.js"></script>```
