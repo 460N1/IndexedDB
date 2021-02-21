@@ -1,20 +1,16 @@
 # IndexedDB Caching
-Enhancing browsing experience by making use of IndexedDB. First of, it's by caching. More to add later.
-By making use of client side IndexedDB, a lot of page content can be cached.
-IndexedDB is especially useful for this as it does not have a certain size limit set, unlike localStorage, sessionStorage and cookies.
-The storage limit depends on the user's disk space, and is usually in the GBs.
-And despite that, it's still a rather untapped offloading location.
+Enhancing browsing experience by making use of IndexedDB.
 
-Using IndexedDB, in combination with Base64, the script named '460n1.caching.js', enables you to permanently cache site content on user's devices.
+By making use of client side IndexedDB, a lot of page content can be cached. IndexedDB is especially useful for this as it does not have a certain size limit set, unlike localStorage, sessionStorage and cookies. The storage limit depends on the user's disk space, and is usually in the GBs. And despite that, it's still a rather untapped offloading location.
 
-What can be cached?
+What can be cached using this script?
 - Images
 - Stylesheets
 - Scripts
 - Videos
 - (possibly more to come, but what else is realistically left that could/should be cached?)
 
-How to use the script?
+How to use it?
   
 Script must be placed at the bottom of the page, else it might miss scripts or content:
 
@@ -45,9 +41,10 @@ Issues
 
 Tests
 On the first time your clients open the site, the speed of the site will obviously depend on the client's hardware specs as well as their internet speed. On any consecutive run, however, the site will load as fast as their browser can handle the data.
-On my end, testing locally, with content on the site amounting to 20.2MB:
 
-1st run: 
+On my end, testing locally, with content on the site upwards of 20MB:
+
+1st run:
 - 4.2 kB transferred
 - 22.3 MB resources
 - Finish: 623 ms
@@ -57,6 +54,6 @@ On my end, testing locally, with content on the site amounting to 20.2MB:
 - 1.1 MB resources
 - Finish: 279 ms
 
-3rd run and all consecutive runs are pretty much identical to the 2nd, so they will be omitted.
-    
-I intend to continue this, possibly adding compression down the road, and enhancing performance.
+3rd run and all consecutive runs are pretty much identical to the 2nd, so they will be omitted for brevity.
+
+I intend to continue this, especially regarding enhancments on performance and possibly adding compression.
