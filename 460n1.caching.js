@@ -3,16 +3,8 @@ let indexedDB = window.indexedDB ||
 				window.mozIndexedDB;
 
 function DB(name) {
-	this.init = (version, upgrade) => {
-		let openReq = indexedDB.open(name, version);
-		openReq.onsuccess = (e) => {
-			let db = e.target.result;
-			if ('setVersion' in db && db.version < version) {
-				let setVerReq = db.setVersion(version);
-				setVerReq.onsuccess = (e) => upgrade(e.target.result.db);
-			}
-			return;
-		};
+	this.init = (upgrade) => {
+		let openReq = indexedDB.open(name, 1);
 		openReq.onupgradeneeded = (e) => upgrade(e.target.result);
 	};
 
@@ -33,13 +25,11 @@ function DB(name) {
 	};
 }
 
-let databaseName = 'StorageDB';
-
 let dbStore = 'storage';
 
-let storageDB = new DB(databaseName);
+let storageDB = new DB('StorageDB');
 
-storageDB.init(1, (db) => db.createObjectStore(dbStore, { keyPath: 'key' }));
+storageDB.init((db) => db.createObjectStore(dbStore, { keyPath: 'key' }));
 
 insert = (key,value) => storageDB.readWrite([ dbStore ], 
 	(tx) => tx.objectStore(dbStore).put({
@@ -91,12 +81,10 @@ dataType = (src) => {
 	}
 };
 
-selfDestruct = (id) => document.getElementById(id).parentNode.removeChild(document.getElementById(id));
-
 (()=>{
 	let dataSrc = document.querySelectorAll("[data-src]");
 	for (let i = 0; i < dataSrc.length; i++)
 		readSource(dataSrc[i].getAttribute("data-src"));
 	var thisScript = document.querySelectorAll("[src*='460n1.caching']")[0];
-	thisScript.parentNode.removeChild(thisScript)
+	thisScript.parentNode.removeChild(thisScript);
 })();
