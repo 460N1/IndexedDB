@@ -1,6 +1,4 @@
-let indexedDB = window.indexedDB ||
-				window.webkitIndexedDB ||
-				window.mozIndexedDB;
+let indexedDB = window.indexedDB || window.webkitIndexedDB || window.mozIndexedDB;
 
 function DB(name) {
 	this.init = (upgrade) => {
